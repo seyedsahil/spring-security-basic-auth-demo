@@ -13,8 +13,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		// @formatter:off
 		httpSecurity
 			.authorizeRequests()
-			.antMatchers("/api/v1/demo/list/resource").access("hasRole('ROLE_ADMIN')")
-			.antMatchers("/api/v1/demo/list/resource/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
+			.antMatchers("/api/v1/demo/list/resources").access("hasRole('ROLE_ADMIN')")
+			.antMatchers("/api/v1/demo/list/resources/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
 			.anyRequest().authenticated()
 				.and()
 			.httpBasic();
